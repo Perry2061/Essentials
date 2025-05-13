@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Lab 1.ma
-//Last modified: Mon, May 12, 2025 07:22:44 PM
+//Last modified: Mon, May 12, 2025 07:23:40 PM
 //Codeset: 1252
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "FFA3DF62-4BF8-C92E-9322-7A825D407B70";
+fileInfo "UUID" "6A39F0CC-452D-84FA-08C5-FF9E43D780EC";
 createNode transform -s -n "persp";
 	rename -uid "B10680CE-4680-7B17-0F9E-C5A544235EEF";
 	setAttr ".v" no;
@@ -270,9 +270,9 @@ createNode poseInterpolatorManager -n "poseInterpolatorManager";
 	rename -uid "07DD75FE-48A0-6E6E-D68C-38818F1E0990";
 createNode displayLayerManager -n "layerManager";
 	rename -uid "4D3A79AC-4693-62CD-ADC8-5390910C07BB";
-	setAttr ".cdl" 2;
-	setAttr -s 3 ".dli[1:2]"  1 2;
-	setAttr -s 3 ".dli";
+	setAttr ".cdl" 3;
+	setAttr -s 4 ".dli[1:3]"  1 2 3;
+	setAttr -s 4 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "11431810-4120-5ADB-949F-75B51CE5550A";
 	setAttr ".ufem" -type "stringArray" 0  ;
@@ -348,6 +348,7 @@ createNode polyPlane -n "polyPlane1";
 	setAttr ".cuv" 2;
 createNode displayLayer -n "Plane";
 	rename -uid "3F5140A2-4123-A062-DBC3-1F89537110A9";
+	setAttr ".v" no;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 1;
 createNode polyCube -n "polyCube1";
@@ -548,6 +549,10 @@ createNode polyCylinder -n "polyCylinder1";
 	rename -uid "39542545-4F92-6A93-6C53-0293DC137BC6";
 	setAttr ".sc" 1;
 	setAttr ".cuv" 3;
+createNode displayLayer -n "Chair";
+	rename -uid "7DFB3BCC-4CE7-23A7-B5CD-749DD3F2255A";
+	setAttr ".ufem" -type "stringArray" 0  ;
+	setAttr ".do" 3;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -630,6 +635,7 @@ connectAttr "groupParts6.og" "pCube1Shape.i";
 connectAttr "groupId11.id" "pCube1Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCube1Shape.iog.og[0].gco";
 connectAttr "groupId12.id" "pCube1Shape.ciog.cog[0].cgid";
+connectAttr "Chair.di" "pCylinder1.do";
 connectAttr "polyCylinder1.out" "pCylinderShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -683,6 +689,7 @@ connectAttr "polyBevel5.out" "groupParts5.ig";
 connectAttr "groupId9.id" "groupParts5.gi";
 connectAttr "polyUnite1.out" "groupParts6.ig";
 connectAttr "groupId11.id" "groupParts6.gi";
+connectAttr "layerManager.dli[3]" "Chair.id";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape1.iog.og[0]" ":initialShadingGroup.dsm" -na;
