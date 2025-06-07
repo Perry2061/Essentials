@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Lab 1.ma
-//Last modified: Fri, Jun 06, 2025 06:33:44 PM
+//Last modified: Fri, Jun 06, 2025 06:35:14 PM
 //Codeset: 1252
 file -rdi 1 -ns "Vase" -rfn "VaseRN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Vase.ma";
 file -r -ns "Vase" -dr 1 -rfn "VaseRN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Vase.ma";
@@ -13,7 +13,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "FBEAD45D-4223-0799-E3FA-B8B31EA7722E";
+fileInfo "UUID" "B589AB90-492F-7309-D94D-48ACB12ACA16";
 createNode transform -s -n "persp";
 	rename -uid "B10680CE-4680-7B17-0F9E-C5A544235EEF";
 	setAttr ".v" no;
@@ -401,10 +401,12 @@ createNode displayLayer -n "Table";
 	setAttr ".do" 2;
 createNode displayLayer -n "Walls";
 	rename -uid "DFD14240-4BFF-A708-0A4C-699F644DEE01";
+	setAttr ".dt" 2;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 3;
 createNode displayLayer -n "Floor";
 	rename -uid "546BEE66-4406-34F0-7511-769089DF5EA2";
+	setAttr ".dt" 2;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 4;
 createNode displayLayer -n "Books";
