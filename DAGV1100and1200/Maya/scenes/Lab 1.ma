@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Lab 1.ma
-//Last modified: Mon, Jun 16, 2025 05:02:31 PM
+//Last modified: Mon, Jun 16, 2025 07:51:58 PM
 //Codeset: 1252
 file -rdi 1 -ns "Table1" -rfn "TableRN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Table.ma";
 file -rdi 1 -ns "Chair" -rfn "ChairRN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Chair.ma";
@@ -8,11 +8,19 @@ file -rdi 1 -ns "Book_Case" -rfn "Book_CaseRN" -op "v=0;" -typ "mayaAscii" "C:/E
 file -rdi 1 -ns "Book_Group" -rfn "Book_GroupRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/Essentials/DAGV1100and1200/Maya//scenes/Book Group.ma";
 file -rdi 1 -ns "Vase" -rfn "VaseRN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Vase.ma";
+file -rdi 1 -ns "Lounge_Chair" -dr 1 -rfn "Lounge_ChairRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Essentials/DAGV1100and1200/Maya//scenes/Lounge Chair.ma";
+file -rdi 1 -ns "Lounge_Chair" -rfn "Lounge_ChairRN1" -op "v=0;" -typ "mayaAscii"
+		 "C:/Essentials/DAGV1100and1200/Maya//scenes/Lounge Chair.ma";
 file -r -ns "Table1" -dr 1 -rfn "TableRN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Table.ma";
 file -r -ns "Chair" -dr 1 -rfn "ChairRN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Chair.ma";
 file -r -ns "Book_Case" -dr 1 -rfn "Book_CaseRN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Book Case.ma";
 file -r -ns "Book_Group" -dr 1 -rfn "Book_GroupRN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Book Group.ma";
 file -r -ns "Vase" -dr 1 -rfn "VaseRN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Vase.ma";
+file -r -ns "Lounge_Chair" -dr 1 -rfn "Lounge_ChairRN" -op "v=0;" -typ "mayaAscii"
+		 "C:/Essentials/DAGV1100and1200/Maya//scenes/Lounge Chair.ma";
+file -r -ns "Lounge_Chair" -dr 1 -rfn "Lounge_ChairRN1" -op "v=0;" -typ "mayaAscii"
+		 "C:/Essentials/DAGV1100and1200/Maya//scenes/Lounge Chair.ma";
 requires maya "2026";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.0";
@@ -22,18 +30,18 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "B4AB3A9B-49AF-4CE5-C65B-B7B49BA0D997";
+fileInfo "UUID" "41B7D63E-4A0D-7BC3-8C3D-FB848068BA35";
 createNode transform -s -n "persp";
 	rename -uid "B10680CE-4680-7B17-0F9E-C5A544235EEF";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 41.085780861697621 52.202869406096063 40.113489094532866 ;
-	setAttr ".r" -type "double3" -37.800000000000523 48.400000000000645 0 ;
+	setAttr ".t" -type "double3" 41.053536482369751 36.139465227020445 41.372065727931236 ;
+	setAttr ".r" -type "double3" -27.000000000000302 37.20000000000006 0 ;
 	setAttr ".rpt" -type "double3" -2.7947812486530198e-15 -9.9473260323847283e-16 -2.8758253470091854e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "655F8B5E-42FA-B5C8-3316-8AA48AB1CD57";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 88.631639008002097;
+	setAttr ".coi" 78.794392601769147;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -12939,15 +12947,15 @@ createNode mesh -n "Chair_3Shape" -p "Chair_3";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "5C62819B-4367-BD9A-5423-61BE32653F15";
+	rename -uid "4F4EDAB3-4812-732A-100B-4C8F7194EB09";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "43A4DDAE-4846-9A2B-3C81-E3AA7CA56470";
+	rename -uid "15315A04-4D64-6F9A-AA4E-868C41E54FFF";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "2159553F-40A5-87C1-7D4E-7AA331787A6E";
+	rename -uid "E002AE38-4927-3B76-AD31-969861A2F971";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "11BFB97B-40F1-5646-F6F0-72811D73A578";
+	rename -uid "3C3F2566-47B1-EB18-2F2F-E386A671C3AC";
 	setAttr ".cdl" 9;
 	setAttr -s 11 ".dli[1:10]"  4 1 2 3 5 6 7 8 
 		9 10;
@@ -12956,7 +12964,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "11431810-4120-5ADB-949F-75B51CE5550A";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "C3CCB51E-4ADF-A962-7A2A-2FA6D84AD4C1";
+	rename -uid "0A019BDA-4AF1-CC96-9841-349A30D6268F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "805FCB4A-4482-1002-95B0-F483407EFDA9";
 	setAttr ".g" yes;
@@ -13132,6 +13140,38 @@ createNode reference -n "VaseRN";
 		2 "|Vase:revolvedSurface17" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode reference -n "Lounge_ChairRN";
+	rename -uid "822E55D8-4D72-1112-77B8-D1B977F341E3";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Lounge_ChairRN"
+		"Lounge_ChairRN" 0;
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "sharedReferenceNode";
+	rename -uid "057094C2-4FC8-612F-B36A-8EAF88771E8D";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"sharedReferenceNode";
+createNode reference -n "Lounge_ChairRN1";
+	rename -uid "E97B65D4-45CC-69B5-FBB3-228E3B87709C";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Lounge_ChairRN1"
+		"Lounge_ChairRN1" 0
+		"Lounge_ChairRN1" 7
+		2 "|Lounge_Chair:polySurface18" "translate" " -type \"double3\" 4.8620493122271693 0.57460275129469718 -8.87354624354164656"
+		
+		2 "|Lounge_Chair:polySurface18" "rotate" " -type \"double3\" 0 -134.99999999999994316 0"
+		
+		2 "|Lounge_Chair:polySurface18" "scale" " -type \"double3\" 1.79149956499573348 1.79149956499573348 1.79149956499573348"
+		
+		2 "|Lounge_Chair:polySurface18" "rotatePivot" " -type \"double3\" 0.93625805610756807 -0.57460275129469751 0.1757396895468169"
+		
+		2 "|Lounge_Chair:polySurface18" "rotatePivotTranslate" " -type \"double3\" -1.70293277291885259 0 0.35389859046827526"
+		
+		2 "|Lounge_Chair:polySurface18" "scalePivot" " -type \"double3\" 0.5735616461288906 0.022501872337114773 0.1068136425344508"
+		
+		2 "|Lounge_Chair:polySurface18" "scalePivotTranslate" " -type \"double3\" 0.36269640997867747 -0.59710462363181227 0.068926047012366112";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -13150,7 +13190,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 2 ".r";
+	setAttr -s 3 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -13158,9 +13198,9 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 34 ".dsm";
+	setAttr -s 36 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 21 ".gn";
+	setAttr -s 22 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -13215,6 +13255,7 @@ connectAttr "layerManager.dli[10]" "Floor.id";
 connectAttr "layerManager.dli[3]" "Books.id";
 connectAttr "layerManager.dli[4]" "BookCase.id";
 connectAttr "layerManager.dli[1]" "Vase1.id";
+connectAttr "sharedReferenceNode.sr" "Lounge_ChairRN.sr";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "Wall_Shape2.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "Wall_Shape1.iog" ":initialShadingGroup.dsm" -na;
