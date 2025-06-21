@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3149667487291705742, guid: 163d2c7ba4e72fe4994d3c53351b6b8f, type: 3}
       propertyPath: m_Name
-      value: Green RIght Variant
+      value: Pink Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4612828210898288038, guid: 163d2c7ba4e72fe4994d3c53351b6b8f, type: 3}
       propertyPath: m_Sprite
