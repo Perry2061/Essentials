@@ -1,13 +1,15 @@
 //Maya ASCII 2026 scene
 //Name: Main Scene 2.ma
-//Last modified: Mon, Aug 04, 2025 10:28:23 PM
+//Last modified: Mon, Aug 04, 2025 11:06:11 PM
 //Codeset: 1252
 file -rdi 1 -ns "Asset_1" -rfn "Asset_1RN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Asset 1.ma";
 file -rdi 1 -ns "Asset_2" -rfn "Asset_2RN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Asset 2.ma";
 file -rdi 1 -ns "Asset_3" -rfn "Asset_3RN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Asset 3.ma";
+file -rdi 1 -ns "Asset_4" -rfn "Asset_4RN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Asset 4.ma";
 file -r -ns "Asset_1" -dr 1 -rfn "Asset_1RN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Asset 1.ma";
 file -r -ns "Asset_2" -dr 1 -rfn "Asset_2RN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Asset 2.ma";
 file -r -ns "Asset_3" -dr 1 -rfn "Asset_3RN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Asset 3.ma";
+file -r -ns "Asset_4" -dr 1 -rfn "Asset_4RN" -op "v=0;" -typ "mayaAscii" "C:/Essentials/DAGV1100and1200/Maya//scenes/Asset 4.ma";
 requires maya "2026";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -18,22 +20,22 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202504040659-cfc1e8923b";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "632D9A7B-48E6-3FE1-5035-86843EA7D45C";
+fileInfo "UUID" "B7AC9A92-4819-960C-46D9-37A9D6672972";
 createNode transform -s -n "persp";
 	rename -uid "C1BFC9C4-46EC-73D0-7B77-2F93DC3CA825";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 44.728305044418242 32.104012453233203 34.445431972059339 ;
-	setAttr ".r" -type "double3" -21.599999999998946 52.399999999997675 0 ;
+	setAttr ".t" -type "double3" 46.207095687863436 28.512691614288183 26.564926800326859 ;
+	setAttr ".r" -type "double3" -21.600000000004179 57.600000000002666 2.967894393549711e-15 ;
 	setAttr ".rpt" -type "double3" 1.5631559273760408e-17 -5.066947556636879e-17 6.5889658356754043e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "00427110-43FD-7365-8C9C-5A9657E9E2C3";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 60.718341929059363;
+	setAttr ".coi" 65.916232640697885;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0 9.7520999908447266 0 ;
+	setAttr ".tp" -type "double3" 0 2.2591277986223322 -7.8943296824557425 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "116017F0-42C3-FCD8-31BC-D4AF80BB4BB8";
@@ -742,15 +744,15 @@ createNode mesh -n "polySurfaceShape1" -p "polySurface1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "B3663D18-46BF-7FA3-C59A-B596D534F8CB";
-	setAttr -s 9 ".lnk";
-	setAttr -s 9 ".slnk";
+	rename -uid "121A8E31-41FC-CEF0-3BD7-94ADFB868541";
+	setAttr -s 11 ".lnk";
+	setAttr -s 11 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "FBAAE75D-4157-F91E-98EF-A7B17B70DAE2";
+	rename -uid "DCAF1EA5-4631-02F5-9B49-D188257C5624";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "D04C3D0D-40FC-38C3-5231-0990EA470DA3";
+	rename -uid "9A8CB6CE-4C39-A294-1C3A-3399985DE969";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "69FD8653-4609-D232-57A4-49ACA1B365F1";
+	rename -uid "A4229E24-4EEB-6078-D002-2AA7129BDE07";
 	setAttr ".cdl" 2;
 	setAttr -s 3 ".dli[1:2]"  1 2;
 	setAttr -s 3 ".dli";
@@ -758,7 +760,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "7C19077A-4376-9B11-EEC0-4AB8D7227D2A";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "9711B06B-4742-9FF4-D468-9AAE0CA97673";
+	rename -uid "1ED83228-48BA-2AD3-0913-EA8FF664D88F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "3ECA88BA-4BBD-9780-817C-13AA6A7B4EE3";
 	setAttr ".g" yes;
@@ -1501,6 +1503,33 @@ createNode reference -n "Asset_3RN";
 		2 "|Asset_3:pSphere2" "scale" " -type \"double3\" 1.96235794185221746 1.96235794185221746 1.96235794185221746";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode reference -n "Asset_4RN";
+	rename -uid "5ADBB019-4C80-BB79-DFE0-60A85A007499";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"Asset_4RN"
+		"Asset_4RN" 0
+		"Asset_4RN" 10
+		2 "|Asset_4:pDisc3" "translate" " -type \"double3\" 0 1.99326945808722478 -8.39432968064509666"
+		
+		2 "|Asset_4:pDisc3" "scale" " -type \"double3\" 2.93924481791632175 2.93924481791632175 2.93924481791632175"
+		
+		2 "|Asset_4:pDisc3" "rotatePivot" " -type \"double3\" -2.4914831442401919e-07 -0.087173714907903599 -3.60567031935490245"
+		
+		2 "|Asset_4:pDisc3" "scalePivot" " -type \"double3\" -8.4766097972948009e-08 0.14574856980377215 -0.89684536235653756"
+		
+		2 "|Asset_4:pDisc3" "scalePivotTranslate" " -type \"double3\" -1.6438221645107118e-07 -0.23292228471167575 -2.7088249569983649"
+		
+		2 "|Asset_4:pCone3" "translate" " -type \"double3\" 0 3.48269933293813638 -6.58978436135120926"
+		
+		2 "|Asset_4:pCone3" "scale" " -type \"double3\" 2.93924481791632175 2.93924481791632175 2.93924481791632175"
+		
+		2 "|Asset_4:pCone3" "rotatePivot" " -type \"double3\" -1.1920927944464523e-07 1.04897229677108905 1.06539648771287032"
+		
+		2 "|Asset_4:pCone3" "scalePivot" " -type \"double3\" -1.1920928955078125e-07 1.04897230863571167 1.06539648771286011"
+		
+		2 "|Asset_4:pCone3" "scalePivotTranslate" " -type \"double3\" 0 -1.186462261770771e-08 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -1512,18 +1541,18 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 9 ".st";
+	setAttr -s 11 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 12 ".s";
+	setAttr -s 14 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 7 ".u";
+	setAttr -s 11 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 4 ".r";
+	setAttr -s 5 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 7 ".tx";
+	setAttr -s 11 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -1552,6 +1581,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "Floor.di" "pPlane1.do";
 connectAttr "Walls.di" "polySurface1.do";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
